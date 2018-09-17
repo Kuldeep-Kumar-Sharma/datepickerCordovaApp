@@ -12,5 +12,9 @@ Once the node modules are there execute
 cordova run android
 ```
 
-#use
+# Use
+
 App only shows the demo of the datepickercordovaplugin inside cordova app.
+
+# Links
+[a link](https://github.com/Kuldeep-Kumar/datepicker-cordovaplugin)
