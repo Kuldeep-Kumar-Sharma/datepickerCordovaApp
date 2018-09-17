@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <title>Calender app</title>
+</head>
+
+<style>
+.center {
+    margin-top: 150px;
+    width: 100%;
+    padding: 10px;
+}
+    
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>    
+
+<script>
+function showDatePickerMethod(){
+       var temp = {
+           "year":1994,
+           "month":3,
+           "day":16
+       };
+    window.plugins.showDatePicker(temp, function (s) {
+            console.log(s);
+            document.getElementById("dateselected").innerHTML = s.date;
+        }, function (e) {
+            console.log(e);
+        });
+   }
+</script>
+
+<body>
+    <div class="app">
+        <div class="center">
+        <center>
+        <h4>Android Cordova Plugin for </h4>
+        <img src="img/calendar.svg" width="80" height="80">
+        <h5>Please Click the Button , to pick the date.</h5>
+        <button onclick="showDatePickerMethod()"  class="button">Button</button>
+        <h4 id="dateselected"></h4>
+        </center>
+        </div>
+    </div>
+</body>
+</html>
